@@ -39,6 +39,7 @@ const CharCard = props => {
             <p>Hair Color: {props.hair_color}</p>
             <p>Eye Color: {props.eye_color}</p>
             <p>Skin Color: {props.skin_color}</p>
+            <p>Film Appearances: {props.films}</p>
         </Card>
     );
 };

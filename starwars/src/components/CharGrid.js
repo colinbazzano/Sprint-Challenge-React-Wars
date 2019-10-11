@@ -40,6 +40,7 @@ export default function CharGrid() {
               hair_color={char.hair_color}
               eye_color={char.eye_color}
               skin_color={char.skin_color}
+              films={char.films.length}
               />
               );
           })}
