@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import axios from 'axios';
+import CharGrid from './components/CharGrid';
 
 
 const App = () => {
 
-  const [char, setChar] = useState([]);
-
-  useEffect(() => {
-    axios
-    .get(`https://swapi.co/api/people/`)
-    .then(response => {
-      console.log('star wars characters', response.data.results)
-    })
-  });
+  
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -25,6 +17,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <div className='card-container'>
+        <CharGrid />
+      </div>
     </div>
   );
 }
