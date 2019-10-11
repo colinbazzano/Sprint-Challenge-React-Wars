@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CharCard from './CharCard';
+import styled from 'styled-components';
+
+const Grid = styled.div`
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+`;
 
 
 export default function CharGrid() {
@@ -20,11 +27,11 @@ export default function CharGrid() {
   }, []);
 
   return (
-      <div className="container">
-          {chars.map(char => {
+      <Grid>
+          {chars.map((char, index) => {
               return (
               <CharCard 
-              key={char.index}
+              key={index}
               name={char.name}
               birth_year={char.birth_year}
               height={char.height}
@@ -32,6 +39,6 @@ export default function CharGrid() {
               />
               );
           })}
-      </div>
+      </Grid>
   );
 }
